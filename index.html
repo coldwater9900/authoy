@@ -4,8 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birthday Wish For My Precious</title>
-<link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3edef; 
+            color: #333; 
+            text-align: center;
+        }
 
+        .countdown-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; 
+            background: #ffffff; 
+            color: #333; 
+            font-size: 2em;
+            font-weight: bold;
+            position: relative;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        #countdown-message {
+            color: #666; 
+        }
+
+        .countdown-message {
+            font-size: 3em;
+            color: #ff66b2;
+            margin: 0;
+        }
+
+        .container {
+            padding: 30px;
+            background-color: #f3edef;
+            border-radius: 60px;
+            max-width: 600px;
+            margin: 50px auto; 
+            box-shadow: 0 5px 10px rgba(0.1, 0.1, 0.1, 0.1);
+            display: none; 
+            opacity: 0; 
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #ff66b2;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        .message {
+            background-color: #ffe6f2;
+            border: 2px solid #ff66b2;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #ffffff;
+            background-color: #ff66b2;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #ff3385;
+        }
+
+        #fireworks {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999;
+        }
+    </style>
 </head>
 <body>
     <div class="countdown-container" id="countdown">
@@ -15,9 +114,9 @@
     <div class="container" id="content">
         <h1>Happy Birthday Authoy &#10084;</h1>
         <div class="message">
-            <p>It's been almost five months since we first met, and your presence in my life has become very precious and meaningful. Who could have knew that, despite failing in 230, I would find something that truly adds value to my life? Thanks for choosing me.</p>
-            <p>Since it becoming more like a gratitute letter than a birthday wish let's focus on the fact that it's finally 28th July!! A Happiest Birthday to my Lokkhi. Though it's your birthday, I'm the one who received the best gift by having you in my life.</p>
-            <p>I wanna remind you once again how incredibly special you are to me. Your make every day brighter and more joyful. I am so grateful for every moment we shared, and I can't wait to create even more amazing memories with you. You deserve all the happiness in the world, today and always.</p>
+            <p>I have been thinking of what could I do to make you feel special on this day but later I realized its you who make the day special for take birth on this planet.</p>
+            <p>It feels good to wish you on your Birthday once again. You make my life easier even though I keep messing up with yours. Hope one day all the issues would get fixed.</p>
+            <p> Always do your best and keep shining in every form in your life.</p>
             <p>Happy Birthday Authoy &lt;3</p>
         </div>
     </div>
@@ -25,8 +124,6 @@
     <canvas id="fireworks"></canvas>
 
     <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.0.0/dist/fireworks.min.js"></script>
-<script src="script.js"></script>
-
 
     <script>
         const birthdayDate = new Date();
