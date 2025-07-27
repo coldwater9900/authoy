@@ -1,0 +1,107 @@
+/* Reset and Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3edef;
+    color: #333;
+    text-align: center;
+}
+
+/* Countdown Section */
+.countdown-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #ffffff;
+    color: #333;
+    font-size: 2em;
+    font-weight: bold;
+    position: relative;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#countdown-message {
+    color: #666;
+}
+
+.countdown-message {
+    font-size: 3em;
+    color: #ff66b2;
+    margin: 0;
+}
+
+/* Main Content Container */
+.container {
+    padding: 30px;
+    background-color: #f3edef;
+    border-radius: 60px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 5px 10px rgba(0.1, 0.1, 0.1, 0.1);
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Typography */
+h1 {
+    color: #ff66b2;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+/* Birthday Message Box */
+.message {
+    background-color: #ffe6f2;
+    border: 2px solid #ff66b2;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Button Styling */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #ff66b2;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #ff3385;
+}
+
+/* Fireworks Canvas */
+#fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+}
