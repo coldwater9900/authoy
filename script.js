@@ -6,6 +6,63 @@ birthdayDate.setHours(1, 3, 0, 0);
 let birthdayShown = false;
 let fireworksStarted = false;
 
+// Load saved posts
+let posts = JSON.parse(localStorage.getItem("posts")) || [];
+
+/* Add new post */
+function addPost() {
+    const input = document.getElementById("postInput");
+    const text = input.value.trim();
+
+    if (!text) return;
+
+    posts.push({
+        text,
+        date: new Date().toLocaleString()
+    });
+
+    localStorage.setItem("posts", JSON.stringify(posts));
+    input.value = "";
+
+    renderPosts();
+}
+
+/* Display posts */
+function renderPosts() {
+    const container = document.getElementById("posts");
+    container.innerHTML = "";
+
+    posts.forEach(p => {
+        const div = document.createElement("div");
+        div.className = "post";
+        div.innerHTML = `
+            <p>${p.text}</p>
+            <small>${p.date}</small>
+        `;
+        container.appendChild(div);
+    });
+}
+
+/* Fake past wishes (you can edit these manually) */
+const pastWishes = [
+    "2024: Happy Birthday ❤️ Hope your smile never fades.",
+    "2025: Another year, same person I care about more than I should."
+];
+
+function renderWishes() {
+    const container = document.getElementById("wishes-container");
+
+    pastWishes.forEach(w => {
+        const div = document.createElement("div");
+        div.className = "wish";
+        div.innerText = w;
+        container.appendChild(div);
+    });
+}
+
+renderPosts();
+renderWishes();
+
 /* Romantic status messages */
 const statusMessages = [
     "Forever loving you ❤️",
